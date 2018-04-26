@@ -5,7 +5,7 @@
   <div class="col">
     <div class="card-columns">
       <ng-container *ngFor="let p of filteredProducts">
-        <product-card [product]="p"></product-card>
+        <product-card [product]="p" [shopping-cart]="cart"></product-card>
       </ng-container>
     </div>
   </div>
