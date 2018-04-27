@@ -5,10 +5,12 @@ export class ShoppingCart {
 
     items: ShoppingCartItem[] = [];
 
-    constructor(private itemsMap: { [key: string]: ShoppingCartItem }) {
+    constructor(private itemsMap?: { [key: string]: ShoppingCartItem }) {
         this.itemsMap = itemsMap || {};
 
+        console.log('AAAAAAAAAAAAAAAAAAAAa', this.items);
         for (let productId in itemsMap) {
+            console.log('BBBBBBBBBBBB', productId);
             let item = itemsMap[productId];
 
             this.items.push(new ShoppingCartItem({ ...item, $key: productId }));
