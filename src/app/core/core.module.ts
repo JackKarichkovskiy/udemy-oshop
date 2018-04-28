@@ -5,11 +5,11 @@ import { HomeComponent } from 'app/core/components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from 'shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    NgbModule.forRoot(),
+    SharedModule,
     RouterModule.forChild([
       { path: 'login', component: LoginComponent }
     ])
